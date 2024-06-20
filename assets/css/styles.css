@@ -231,7 +231,7 @@ img {
 }
 
 .home__blob {
-  fill: var(--first-color);
+  fill: var();
 }
 
 .home__blob-img {
