@@ -193,7 +193,7 @@ img {
   margin-bottom: var(--mb-5);
 }
 .home__title-color {
-  color: var(--first-color);
+  color: var(--second-color);
 }
 .home__social {
   display: flex;
