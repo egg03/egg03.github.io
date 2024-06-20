@@ -11,6 +11,7 @@
     --hue-color: 224;
     --first-color: hsl(var(--hue-color), 89%, 60%);
     --second-color: hsl(var(--hue-color), 56%, 12%);
+    --q-color: hsl(var(--hue-color), 100%, 100%);
 
     /*===== Fuente y tipografia =====*/
     --body-font: 'Poppins', sans-serif;
@@ -215,7 +216,7 @@ img{
         width: 260px;
     }
     &__blob{
-        fill: var(--first-color);
+        fill: var(--q-color);
 
         &-img{
             width: 360px;
