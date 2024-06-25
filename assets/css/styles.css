@@ -331,8 +331,8 @@ img {
       padding-bottom: 56.25%; /* Aspect ratio (height / width) x 100% */
       overflow: hidden; /* Hides overflowing content */
 
-     border: 1px solid #ddd; /* Example border style, width, and color */
-     padding: 10px; /* Example padding (adjust as needed) */
+ /*    border: 1px solid #ddd; /* Example border style, width, and color 
+     padding: 10px; /* Example padding (adjust as needed)
      margin: 20px; /* Example margin (adjust as needed) */
 
     }
