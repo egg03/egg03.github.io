@@ -323,6 +323,24 @@ img {
 }
 
 
+.work__video {
+  position: relative;
+  width: 100%; /* Fills container width */
+  height: 0;
+  padding-bottom: 56.25%; /* Aspect ratio (height / width) x 100% */
+  overflow: hidden; /* Hides overflowing content */
+}
+
+.work__video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
 /* ===== CONTACT =====*/
 .contact__input {
   width: 100%;
