@@ -332,6 +332,10 @@ img {
 }
 
 .work__video video {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* optional for vertical centering */
+  
   position: absolute;
   top: 0;
   left: 0;
