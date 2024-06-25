@@ -325,11 +325,10 @@ img {
 
   /* Styles for the responsive video section */
     .work__video {
-      
-        position: relative;
-        max-width: 100%; /* Ensures video doesn't exceed container width */
-        padding-bottom: 56.25%; /* Aspect ratio */
-        margin-bottom: var(--mb-4);
+       position: relative;
+       max-width: 100%; /* Ensures video doesn't exceed container width */
+       padding-bottom: 56.25%; /* Aspect ratio */
+       margin: 30px 50px 20px 10px; /* Top, right, bottom, left margins */
     }
 
     .work__video video {
