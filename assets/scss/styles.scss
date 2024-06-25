@@ -344,12 +344,8 @@ img{
         row-gap: 2rem;
     }
    
-        & img{
-            transition: 1s;
-
-            &:hover{
-                transform: scale(1.1);
-            
+        & video{
+            transition: 1s;      
         }
     }
 }
