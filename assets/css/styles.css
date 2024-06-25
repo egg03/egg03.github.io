@@ -338,8 +338,8 @@ img {
   justify-content: center;
   align-items: center; /* optional for vertical centering */
 
-  width: 640px; /* Adjust width as desired */
-  height: 360px; /* Adjust height as desired */
+  width: 320px; /* Adjust width as desired */
+  height: 180px; /* Adjust height as desired */
   padding-bottom: 56.25%; /* Aspect ratio (height / width) x 100% */
   overflow: hidden; /* Hides overflowing content */
   
