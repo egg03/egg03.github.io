@@ -329,6 +329,7 @@ img {
         position: relative;
         max-width: 100%; /* Ensures video doesn't exceed container width */
         padding-bottom: 56.25%; /* Aspect ratio */
+        border-radius: 5rem;
     }
 
     .work__video video {
