@@ -340,10 +340,6 @@ img{
 
 /* ===== VIDEO =====*/
 .work__video{
-    &__container{
-        row-gap: 2rem;
-    }
-   
         & video{
             transition: 1s;      
         }
