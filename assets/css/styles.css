@@ -325,19 +325,13 @@ img {
 
   /* Styles for the responsive video section */
     .work__video {
+      border-radius: 0.5rem;
       position: relative;
       width: 100%; /* Fills container width */
       height: 0;
       padding-bottom: 56.25%; /* Aspect ratio (height / width) x 100% */
       overflow: hidden; /* Hides overflowing content */
 
-    /* Styles for the video container */
-        position: relative;
-        width: 70%; /* Fills container width */
-        height: 0;
-        padding-bottom: 56.25%; /* Aspect ratio (height / width) x 100% */
-        overflow: hidden; /* Hides overflowing content */
-        background-color: #f0f0f0; /* Example background color */
     }
 
     .work__video video {
