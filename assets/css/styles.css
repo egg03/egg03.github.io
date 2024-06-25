@@ -326,15 +326,10 @@ img {
   /* Styles for the responsive video section */
     .work__video {
       position: relative;
-      width: 640px; /* Fills container width */
-      height: 360px;
+      width: 100%; /* Fills container width */
+      height: 0%;
       padding-bottom: 56.25%; /* Aspect ratio (height / width) x 100% */
       overflow: hidden; /* Hides overflowing content */
-
- /*    border: 1px solid #ddd; /* Example border style, width, and color 
-     padding: 10px; /* Example padding (adjust as needed)
-     margin: 20px; /* Example margin (adjust as needed) */
-
     }
 
     .work__video video {
