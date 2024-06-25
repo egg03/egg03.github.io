@@ -338,12 +338,35 @@ img{
 }
 
 
-/* ===== VIDEO =====*/
+/* ===== VIDEO =====
 .work__video{
         & video{
             transition: 1s;      
         }
     }
+} */
+
+.work__video {
+  & video {
+    transition: 1s; /* Maintain your transition effect */
+  }
+
+  /* Media Queries for Different Screen Sizes  */
+
+  @media only screen and (max-width: 768px) {
+    /* Styles for smaller screens (adjust as needed) */
+    max-width: 80%; /* Example: Set max-width for smaller screens */
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    /* Styles for medium screens (adjust as needed) */
+    max-width: 60%; /* Example: Set max-width for medium screens */
+  }
+
+  @media only screen and (min-width: 992px) {
+    /* Styles for larger screens (adjust as needed) */
+    max-width: 50%; /* Example: Set max-width for larger screens */
+  }
 }
 
 
