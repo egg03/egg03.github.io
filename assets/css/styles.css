@@ -326,7 +326,7 @@ img {
   /* Styles for the responsive video section */
     .work__video {
       position: relative;
- /*     width: 100%; /* Fills container width */
+      width: 640px; /* Fills container width */
       height: 0;
       padding-bottom: 56.25%; /* Aspect ratio (height / width) x 100% */
       overflow: hidden; /* Hides overflowing content */
