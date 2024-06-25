@@ -325,6 +325,7 @@ img {
 
   /* Styles for the responsive video section */
     .work__video {
+       justify-self: center;
        position: relative;
        max-width: 100%; /* Ensures video doesn't exceed container width */
        padding-bottom: 56.25%; /* Aspect ratio */
@@ -332,11 +333,15 @@ img {
     }
 
     .work__video video {
+      width: 200px;
+      border-radius: 0.5rem;
+
+      /*
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 100%;  */
     }
 
 /* ===== CONTACT =====*/
