@@ -324,13 +324,11 @@ img {
 
 
   /* Styles for the responsive video section */
-    .work__video {
-       justify-self: center;
-       position: relative;
-       max-width: 100%; /* Ensures video doesn't exceed container width */
-       padding-bottom: 56.25%; /* Aspect ratio */
-       margin: 20px; /* Applies 20px margin on all sides */
-    }
+.work__video {
+  position: relative;
+  max-width: 100%; /* Ensures video doesn't exceed container width */
+  padding-bottom: 56.25%; /* Aspect ratio */
+}
 
     .work__video video {
       width: 100%;
