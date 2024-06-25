@@ -337,6 +337,11 @@ img {
   display: flex;
   justify-content: center;
   align-items: center; /* optional for vertical centering */
+
+  width: 100%; /* Fills container width */
+  height: 0;
+  padding-bottom: 56.25%; /* Aspect ratio (height / width) x 100% */
+  overflow: hidden; /* Hides overflowing content */
   
   position: absolute;
   top: 0;
