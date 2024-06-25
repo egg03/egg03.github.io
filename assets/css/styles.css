@@ -327,10 +327,8 @@ img {
     .work__video {
       
         position: relative;
-        width: 100%;
-        max-width: 800px; /* Adjust as needed */
-        padding-bottom: 56.25%;
-        overflow: hidden;
+        max-width: 100%; /* Ensures video doesn't exceed container width */
+        padding-bottom: 56.25%; /* Aspect ratio */
     }
 
     .work__video video {
