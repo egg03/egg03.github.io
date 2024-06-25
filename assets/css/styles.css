@@ -343,11 +343,6 @@ img {
   width: 70%;
   height: 70%;
 }
-.work__video video:hover {
-  transform: scale(1.1);
-}
-
-
 
 /* ===== CONTACT =====*/
 .contact__input {
