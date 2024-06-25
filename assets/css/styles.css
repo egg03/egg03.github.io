@@ -330,6 +330,12 @@ img {
       height: 0;
       padding-bottom: 56.25%; /* Aspect ratio (height / width) x 100% */
       overflow: hidden; /* Hides overflowing content */
+
+    /* Styles for the video container */
+      background-color: #f0f0f0; /* Example background color */
+      padding: 20px; /* Example padding */
+      border: 1px solid #ddd; /* Example border */
+      margin: 0 auto; /* Centers the container horizontally */
     }
 
     .work__video video {
