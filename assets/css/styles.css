@@ -332,6 +332,7 @@ img {
 }
 
 .work__video video {
+  position: relative;
   transition: 1s;
   display: flex;
   justify-content: center;
