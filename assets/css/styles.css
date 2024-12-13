@@ -96,6 +96,10 @@ img {
   padding-bottom: 2rem;
 }
 
+.section_subtitle {
+  text-align: center;
+}
+
 /*===== LAYOUT =====*/
 .bd-grid {
   max-width: 1024px;
