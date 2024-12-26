@@ -70,17 +70,6 @@ img {
   display: block;
 }
 
-/*===== Button CSS ==== */
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #C1EE19; /* Green */
-  border: none;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
 
 /*===== CLASS CSS ===== */
 .section-title {
@@ -504,6 +493,18 @@ img {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
   }
+
+  /*===== Button CSS ==== */
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #C1EE19; /* Green */
+    border: none;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+   }
 }
 @media screen and (min-width: 992px) {
   .bd-grid {
