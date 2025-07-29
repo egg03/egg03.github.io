@@ -97,7 +97,7 @@ nav ul li a:hover::after {
 
     /* By default, hide the nav menu on mobile */
     #nav-menu {
-        display: none;
+        display: none !important; /* Force hide on mobile by default */
     }
 
     /* When 'mobile-nav-visible' class is added by JS, show it as a column */
