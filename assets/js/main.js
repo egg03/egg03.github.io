@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // --- Debugging: Confirm main.js is loading ---
+    console.log('main.js loaded and DOMContentLoaded event fired.');
+
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const navMenu = document.getElementById('nav-menu');
 
@@ -37,31 +40,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const project2NextButton = document.getElementById('project2-next');
 
     if (project2Image && project2PrevButton && project2NextButton) {
-        // Define the images for the carousel
+        console.log('Project 2 carousel elements found:', { project2Image, project2PrevButton, project2NextButton });
+
+        // Define the images for the carousel.
+        // Ensure these paths are correct relative to your index.html file.
         const project2Images = [
-            'assets/img/MCC Context Diagram.jpg', // Original image
-            'assets/img/DA Image.png', // Example placeholder image 1
-            'assets/img/MCC Gen Flowchart.jpg' // Example placeholder image 2
+            'assets/img/MCC Context Diagram.jpg', // Your first image
+            'assets/img/DA Image.png', // Replace with the path to your 2nd image (e.g., 'assets/img/your-image-2.jpg')
+            'assets/img/MCC Gen Flowchart.jpg' // Replace with the path to your 3rd image (e.g., 'assets/img/your-image-3.png')
+            // Add more image paths here if you have more images for this carousel
         ];
         let currentImageIndex = 0;
 
-        // Function to update the displayed image
+        // Function to update the displayed image (simplified for debugging)
         const updateProject2Image = () => {
-            project2Image.style.opacity = 0; // Start fade-out
-            setTimeout(() => {
-                project2Image.src = project2Images[currentImageIndex];
-                project2Image.style.opacity = 1; // Fade-in
-            }, 150); // Match this duration with CSS transition if any
+            console.log('Updating image to index:', currentImageIndex, 'path:', project2Images[currentImageIndex]);
+            project2Image.src = project2Images[currentImageIndex];
         };
 
         // Event listener for the previous button
         project2PrevButton.addEventListener('click', () => {
+            console.log('Previous button clicked.');
             currentImageIndex = (currentImageIndex - 1 + project2Images.length) % project2Images.length;
             updateProject2Image();
         });
 
         // Event listener for the next button
         project2NextButton.addEventListener('click', () => {
+            console.log('Next button clicked.');
             currentImageIndex = (currentImageIndex + 1) % project2Images.length;
             updateProject2Image();
         });
@@ -69,6 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Initialize the carousel with the first image
         updateProject2Image();
     } else {
-        console.error('Project 2 carousel elements not found!');
+        console.error('Project 2 carousel elements (image, prev, or next button) not found!');
     }
 });
