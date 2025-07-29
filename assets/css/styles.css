@@ -89,32 +89,43 @@ nav ul li a:hover::after {
 }
 
 /* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 767px) { /* Changed from 768px to 767px for consistency with Tailwind's 'md:' breakpoint */
     header nav {
         flex-direction: column;
         align-items: center;
     }
 
-    header nav ul {
-        margin-top: 1rem;
+    /* Hide navigation by default on mobile, show when 'flex' is toggled by JS */
+    #nav-menu {
+        display: none; /* Hidden by default on mobile */
+    }
+
+    #nav-menu.flex { /* When JS adds 'flex' class */
+        display: flex;
         flex-direction: column;
         align-items: center;
-        space-x: 0;
-        space-y: 0.5rem;
+        width: 100%;
+        padding-bottom: 1rem; /* Add some padding below the menu items */
     }
 
-    #hero h1 {
-        font-size: 3rem; /* Adjust font size for smaller screens */
+    #nav-menu li {
+        width: 100%; /* Make list items take full width */
+        text-align: center;
     }
 
-    #hero p {
-        font-size: 1.25rem;
-    }
-
-    #about p {
-        font-size: 1rem;
+    #nav-menu li a {
+        padding: 0.75rem 0; /* Adjust padding for mobile links */
+        width: 100%;
+        display: block; /* Ensure the whole area is clickable */
     }
 }
 
-
-
+/* Ensure desktop navigation is always a flex row */
+@media (min-width: 768px) { /* md breakpoint and up */
+    #nav-menu {
+        display: flex !important; /* Always show as flex on desktop */
+        flex-direction: row !important; /* Always a row on desktop */
+        width: auto !important; /* Auto width on desktop */
+        margin-top: 0 !important; /* No top margin on desktop */
+    }
+}
