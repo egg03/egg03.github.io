@@ -45,12 +45,22 @@ document.addEventListener('DOMContentLoaded', () => {
             modalProjectImage.classList.add('hidden'); // Hide if no image provided
         }
 
+        // 1. Make the modal visible (display: flex) but keep it transparent and scaled down
         projectModal.classList.remove('hidden');
-        // Trigger reflow to ensure transition plays
-        void projectModal.offsetWidth; 
-        projectModal.classList.add('opacity-100');
-        projectModal.querySelector('div').classList.add('scale-100');
-        projectModal.querySelector('div').classList.remove('scale-95');
+        // Add initial transition classes if they were removed for some reason
+        projectModal.classList.add('opacity-0', 'transition-opacity', 'duration-300');
+        projectModal.querySelector('div').classList.add('scale-95', 'transition-transform', 'duration-300');
+
+
+        // 2. Use requestAnimationFrame to ensure the browser has rendered the display change
+        //    before applying the transition-triggering classes.
+        requestAnimationFrame(() => {
+            projectModal.classList.remove('opacity-0');
+            projectModal.classList.add('opacity-100');
+            projectModal.querySelector('div').classList.remove('scale-95');
+            projectModal.querySelector('div').classList.add('scale-100');
+        });
+        
         document.body.classList.add('overflow-hidden'); // Prevent scrolling body when modal is open
     };
 
@@ -59,11 +69,16 @@ document.addEventListener('DOMContentLoaded', () => {
         projectModal.classList.remove('opacity-100');
         projectModal.querySelector('div').classList.remove('scale-100');
         projectModal.querySelector('div').classList.add('scale-95');
-        projectModal.addEventListener('transitionend', () => {
-            if (projectModal.classList.contains('opacity-0')) {
-                projectModal.classList.add('hidden');
+
+        // Listen for the opacity transition to end on the modal overlay
+        projectModal.addEventListener('transitionend', function handler(event) {
+            // Ensure this listener only fires for the opacity transition on the modal overlay
+            if (event.propertyName === 'opacity' && projectModal.classList.contains('opacity-0')) {
+                projectModal.classList.add('hidden'); // Hide it after transition completes
+                projectModal.removeEventListener('transitionend', handler); // Remove the listener
             }
-        }, { once: true }); // Ensure event listener is removed after one use
+        }, { once: true }); // Use { once: true } to automatically remove the listener after it fires once
+        
         document.body.classList.remove('overflow-hidden');
     };
 
