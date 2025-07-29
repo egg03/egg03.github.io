@@ -95,12 +95,10 @@ nav ul li a:hover::after {
         align-items: center;
     }
 
-    /* Hide navigation by default on mobile, show when 'flex' is toggled by JS */
-    #nav-menu {
-        display: none !important; /* Force hide on mobile by default */
-    }
+    /* The #nav-menu is initially hidden by Tailwind's 'hidden' class in index.html */
 
-    #nav-menu.flex { /* When JS adds 'flex' class */
+    /* This custom class will be toggled by JS to show the mobile menu */
+    #nav-menu.mobile-nav-active {
         display: flex !important; /* Force show as flex on mobile when active */
         flex-direction: column;
         align-items: center;
