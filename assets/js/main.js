@@ -10,9 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Hamburger menu clicked!');
             console.log('Before toggle - navMenu classes:', navMenu.classList);
 
-            // Simply toggle the 'hidden' class.
-            // Tailwind's 'md:flex' will ensure it's always visible on larger screens.
-            navMenu.classList.toggle('hidden');
+            // Toggle the custom 'mobile-nav-visible' class
+            navMenu.classList.toggle('mobile-nav-visible');
 
             console.log('After toggle - navMenu classes:', navMenu.classList);
         });
@@ -21,10 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
         navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 // Only hide if it's currently visible and on a mobile screen
-                // Check if the menu is not hidden AND the screen width is less than md breakpoint (768px)
-                if (!navMenu.classList.contains('hidden') && window.innerWidth < 768) {
+                // Check if the menu has the 'mobile-nav-visible' class AND the screen width is less than md breakpoint (768px)
+                if (navMenu.classList.contains('mobile-nav-visible') && window.innerWidth < 768) {
                     console.log('Nav link clicked, closing mobile menu.');
-                    navMenu.classList.add('hidden'); // Hide the menu
+                    navMenu.classList.remove('mobile-nav-visible'); // Hide the menu
                 }
             });
         });
