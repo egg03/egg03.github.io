@@ -90,23 +90,29 @@ nav ul li a:hover::after {
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 767px) {
-    header nav {
-        flex-direction: column;
-        align-items: center;
+    /* Ensure the nav element is relative for absolute positioning of its children */
+    nav {
+        position: relative; /* Crucial for absolute positioning of #nav-menu */
     }
 
     /* By default, hide the nav menu on mobile */
     #nav-menu {
-        display: none !important; /* Force hide on mobile by default */
+        display: none;
     }
 
-    /* When 'mobile-nav-visible' class is added by JS, show it as a column */
+    /* When 'mobile-nav-visible' class is added by JS, show it as a column and position it */
     #nav-menu.mobile-nav-visible {
         display: flex !important; /* Force display as flex */
         flex-direction: column !important; /* Force column direction */
         align-items: center;
         width: 100%;
-        padding-bottom: 1rem;
+        position: absolute; /* Overlay content */
+        top: 100%; /* Position right below the header */
+        left: 0;
+        background-color: white; /* Add a background to cover content */
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Add subtle shadow */
+        padding: 1rem 0; /* Add padding inside the menu */
+        z-index: 20; /* Ensure it's above other content */
     }
 
     #nav-menu li {
@@ -128,5 +134,9 @@ nav ul li a:hover::after {
         flex-direction: row !important; /* Always a row on desktop */
         width: auto !important; /* Auto width on desktop */
         margin-top: 0 !important; /* No top margin on desktop */
+        position: static !important; /* Reset position for desktop */
+        background-color: transparent !important; /* No background on desktop */
+        box-shadow: none !important; /* No shadow on desktop */
+        padding: 0 !important; /* No extra padding on desktop */
     }
 }
