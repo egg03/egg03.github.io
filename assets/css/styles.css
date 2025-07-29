@@ -129,22 +129,3 @@ nav ul li a:hover::after {
         margin-top: 0 !important; /* No top margin on desktop */
     }
 }
-
-/* Modal specific styles */
-/* The hidden and opacity-0 classes are handled by Tailwind and JS */
-#project-modal.hidden {
-    display: none;
-}
-
-#project-modal {
-    transition: opacity 0.3s ease-out; /* Smooth fade in/out */
-}
-
-#project-modal > div { /* Targeting the inner modal content */
-    transition: transform 0.3s ease-out; /* Smooth scale in/out */
-}
-
-/* Prevent body scrolling when modal is open */
-body.overflow-hidden {
-    overflow: hidden;
-}
