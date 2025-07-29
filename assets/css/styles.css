@@ -97,11 +97,11 @@ nav ul li a:hover::after {
 
     /* Hide navigation by default on mobile, show when 'flex' is toggled by JS */
     #nav-menu {
-        display: none; /* Hidden by default on mobile */
+        display: none !important; /* Force hide on mobile by default */
     }
 
     #nav-menu.flex { /* When JS adds 'flex' class */
-        display: flex;
+        display: flex !important; /* Force show as flex on mobile when active */
         flex-direction: column;
         align-items: center;
         width: 100%;
