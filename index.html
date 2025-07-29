@@ -104,9 +104,8 @@
         <div class="container mx-auto px-4">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-indigo-700">My Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project Card 1 - Now with Video -->
+                <!-- Project Card 1 - Now with Video and data attributes for modal -->
                 <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300 transform hover:scale-105">
-                    <!-- Placeholder video. Replace 'your-video-url.mp4' with your actual video link -->
                     <video controls class="w-full h-48 object-cover">
                         <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -114,25 +113,37 @@
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-indigo-600">E-commerce Website</h3>
                         <p class="text-gray-700 mb-4">A fully functional e-commerce platform built with React and Node.js, featuring user authentication, product listings, and a shopping cart.</p>
-                        <a href="#" class="text-indigo-500 hover:text-indigo-700 font-medium">View Project &rarr;</a>
+                        <a href="#" class="text-indigo-500 hover:text-indigo-700 font-medium view-project-btn"
+                           data-project-title="E-commerce Website"
+                           data-project-description="This is a detailed description of the E-commerce Website project. It showcases advanced features like secure user authentication, real-time inventory management, a robust shopping cart system, and integration with payment gateways. Technologies used include React for the frontend, Node.js with Express for the backend, and MongoDB for the database. The project emphasizes a smooth user experience and high performance."
+                           data-project-image="https://placehold.co/800x600/E0E7FF/4F46E5?text=E-commerce+Details"
+                           data-project-link="https://github.com/yourusername/ecommerce-project">View Project &rarr;</a>
                     </div>
                 </div>
-                <!-- Project Card 2 -->
+                <!-- Project Card 2 - with data attributes for modal -->
                 <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300 transform hover:scale-105">
                     <img src="https://placehold.co/600x400/E0E7FF/4F46E5?text=Project+2" alt="Project 2" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-indigo-600">Task Management App</h3>
                         <p class="text-gray-700 mb-4">A sleek and intuitive task management application developed using Vue.js and a Firebase backend for real-time data synchronization.</p>
-                        <a href="#" class="text-indigo-500 hover:text-indigo-700 font-medium">View Project &rarr;</a>
+                        <a href="#" class="text-indigo-500 hover:text-indigo-700 font-medium view-project-btn"
+                           data-project-title="Task Management App"
+                           data-project-description="This task management application provides users with a simple yet powerful way to organize their daily tasks. Features include task creation, editing, deletion, and real-time synchronization across devices using Firebase. The frontend is built with Vue.js, offering a reactive and efficient user interface. It focuses on user productivity and ease of use."
+                           data-project-image="https://placehold.co/800x600/E0E7FF/4F46E5?text=Task+App+Details"
+                           data-project-link="https://github.com/yourusername/task-app">View Project &rarr;</a>
                     </div>
                 </div>
-                <!-- Project Card 3 -->
+                <!-- Project Card 3 - with data attributes for modal -->
                 <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300 transform hover:scale-105">
                     <img src="https://placehold.co/600x400/E0E7FF/4F46E5?text=Project+3" alt="Project 3" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-indigo-600">Blog Platform</h3>
                         <p class="text-gray-700 mb-4">A responsive blog platform built with Django, allowing users to create, edit, and publish posts with a rich text editor.</p>
-                        <a href="#" class="text-indigo-500 hover:text-indigo-700 font-medium">View Project &rarr;</a>
+                        <a href="#" class="text-indigo-500 hover:text-indigo-700 font-medium view-project-btn"
+                           data-project-title="Blog Platform"
+                           data-project-description="This is a comprehensive blog platform designed for content creators. It features a robust backend built with Django, user authentication, and a rich text editor for post creation. The frontend is responsive and accessible, ensuring a great reading experience on any device. It includes comment sections and category filtering."
+                           data-project-image="https://placehold.co/800x600/E0E7FF/4F46E5?text=Blog+Details"
+                           data-project-link="https://github.com/yourusername/blog-platform">View Project &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -170,6 +181,21 @@
             <p>&copy; 2025 John Paul. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Project Modal Structure -->
+    <div id="project-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50 hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full p-6 relative transform scale-95 transition-transform duration-300">
+            <button id="close-modal-btn" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-2xl font-bold rounded-full p-1 focus:outline-none">
+                &times;
+            </button>
+            <h3 id="modal-project-title" class="text-3xl font-bold text-indigo-700 mb-4"></h3>
+            <img id="modal-project-image" src="" alt="Project Image" class="w-full h-64 object-cover rounded-md mb-4 hidden">
+            <p id="modal-project-description" class="text-gray-700 mb-6 leading-relaxed"></p>
+            <a id="modal-project-link" href="#" target="_blank" class="bg-indigo-600 text-white hover:bg-indigo-700 font-bold py-2 px-6 rounded-full shadow-md transition duration-300 inline-block">
+                View Live Project
+            </a>
+        </div>
+    </div>
 
     <!-- Link to main.js -->
     <script src="js/main.js"></script>
