@@ -10,10 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Hamburger menu clicked!');
             console.log('Before toggle - navMenu classes:', navMenu.classList);
 
-            // Toggle Tailwind's 'hidden' class to control display: none
+            // Simply toggle the 'hidden' class.
+            // Tailwind's 'md:flex' will ensure it's always visible on larger screens.
             navMenu.classList.toggle('hidden');
-            // Toggle our custom 'mobile-nav-active' class to apply flexbox styles
-            navMenu.classList.toggle('mobile-nav-active');
 
             console.log('After toggle - navMenu classes:', navMenu.classList);
         });
@@ -22,10 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
         navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 // Only hide if it's currently visible and on a mobile screen
+                // Check if the menu is not hidden AND the screen width is less than md breakpoint (768px)
                 if (!navMenu.classList.contains('hidden') && window.innerWidth < 768) {
                     console.log('Nav link clicked, closing mobile menu.');
-                    navMenu.classList.add('hidden');
-                    navMenu.classList.remove('mobile-nav-active'); // Remove custom active class
+                    navMenu.classList.add('hidden'); // Hide the menu
                 }
             });
         });
