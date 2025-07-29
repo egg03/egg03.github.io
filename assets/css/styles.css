@@ -90,10 +90,7 @@ nav ul li a:hover::after {
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 767px) {
-    /* Ensure the nav element is relative for absolute positioning of its children */
-    nav {
-        position: relative; /* Crucial for absolute positioning of #nav-menu */
-    }
+    /* No need for position: relative on nav here, as #nav-menu will be fixed */
 
     /* By default, hide the nav menu on mobile */
     #nav-menu {
@@ -106,22 +103,24 @@ nav ul li a:hover::after {
         flex-direction: column !important; /* Force column direction */
         align-items: center;
         width: 100%;
-        position: absolute; /* Overlay content */
-        top: 100%; /* Position right below the header */
+        height: 100vh; /* Take full viewport height */
+        position: fixed; /* Overlay content over everything */
+        top: 0;
         left: 0;
         background-color: white; /* Add a background to cover content */
         box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Add subtle shadow */
-        padding: 1rem 0; /* Add padding inside the menu */
-        z-index: 20; /* Ensure it's above other content */
+        padding-top: 4rem; /* Add padding to account for fixed header height */
+        z-index: 50; /* Ensure it's above other content and header */
+        overflow-y: auto; /* Allow scrolling if menu content is long */
     }
 
     #nav-menu li {
         width: 100%;
         text-align: center;
+        padding: 0.75rem 0; /* Adjust padding for mobile links */
     }
 
     #nav-menu li a {
-        padding: 0.75rem 0;
         width: 100%;
         display: block;
     }
@@ -138,5 +137,7 @@ nav ul li a:hover::after {
         background-color: transparent !important; /* No background on desktop */
         box-shadow: none !important; /* No shadow on desktop */
         padding: 0 !important; /* No extra padding on desktop */
+        height: auto !important; /* Reset height for desktop */
+        overflow-y: visible !important; /* Reset overflow for desktop */
     }
 }
