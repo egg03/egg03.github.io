@@ -95,8 +95,13 @@ nav ul li a:hover::after {
         align-items: center;
     }
 
-    /* Ensure the nav menu is a column on mobile when visible */
-    #nav-menu:not(.hidden) { /* When the 'hidden' class is NOT present */
+    /* By default, hide the nav menu on mobile */
+    #nav-menu {
+        display: none;
+    }
+
+    /* When 'mobile-nav-visible' class is added by JS, show it as a column */
+    #nav-menu.mobile-nav-visible {
         display: flex !important; /* Force display as flex */
         flex-direction: column !important; /* Force column direction */
         align-items: center;
