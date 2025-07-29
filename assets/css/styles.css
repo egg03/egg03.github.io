@@ -56,7 +56,7 @@ html {
 
 .btn-primary:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 44px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 /* Project Card Hover Effect */
@@ -89,14 +89,24 @@ nav ul li a:hover::after {
 }
 
 /* Responsive adjustments for smaller screens */
-@media (max-width: 767px) { /* Changed from 768px to 767px for consistency with Tailwind's 'md:' breakpoint */
+@media (max-width: 767px) {
     header nav {
         flex-direction: column;
         align-items: center;
     }
 
-    /* #nav-menu is initially hidden by Tailwind's 'hidden' class in index.html */
-    /* When 'hidden' is removed by JS, Tailwind's 'flex-col' and 'w-full' will apply */
+    /* Custom classes for mobile navigation visibility */
+    .mobile-nav-closed {
+        display: none !important; /* Force hide on mobile when closed */
+    }
+
+    .mobile-nav-open {
+        display: flex !important; /* Force show as flex on mobile when open */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 1rem; /* Add some padding below the menu items */
+    }
 
     #nav-menu li {
         width: 100%; /* Make list items take full width */
@@ -117,5 +127,11 @@ nav ul li a:hover::after {
         flex-direction: row !important; /* Always a row on desktop */
         width: auto !important; /* Auto width on desktop */
         margin-top: 0 !important; /* No top margin on desktop */
+    }
+    /* Ensure no mobile-specific classes interfere on desktop */
+    #nav-menu.mobile-nav-closed,
+    #nav-menu.mobile-nav-open {
+        display: flex !important;
+        flex-direction: row !important;
     }
 }
