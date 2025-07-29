@@ -4,7 +4,7 @@
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: #000; /* Black text */
+    color: #333; /* Dark gray text for general content */
 }
 
 /* Smooth scrolling for anchor links */
@@ -78,19 +78,19 @@ nav ul li a::after {
     display: block;
     margin-top: 5px;
     right: 0;
-    background: #000; /* Black for hover effect */
+    background: #2563EB; /* Blue-600 for hover effect */
     transition: width 0.3s ease;
 }
 
 nav ul li a:hover::after {
     width: 100%;
     left: 0;
-    background: #000; /* Black for hover effect */
+    background: #2563EB; /* Blue-600 for hover effect */
 }
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 767px) {
-    /* No need for position: relative on nav here, as #nav-menu will be fixed */
+    /* The nav element does not need 'position: relative' if #nav-menu is fixed */
 
     /* By default, hide the nav menu on mobile */
     #nav-menu {
