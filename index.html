@@ -1,317 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Tailwind CSS CDN for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS for additional styling -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900 flex flex-col min-h-screen">
 
-        <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Header Section -->
+    <header class="bg-white shadow-md py-4">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-600 rounded-md p-2">My Portfolio</a>
+            <ul class="flex space-x-6">
+                <li><a href="#about" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-md p-2">About</a></li>
+                <li><a href="#skills" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-md p-2">Skills</a></li>
+                <li><a href="#projects" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-md p-2">Projects</a></li>
+                <li><a href="#contact" class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-md p-2">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-       
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Hero Section -->
+    <section id="hero" class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-20 md:py-32 flex-grow flex items-center justify-center">
+        <div class="container mx-auto px-4 text-center">
+            <img src="https://placehold.co/150x150/6366F1/FFFFFF?text=JP" alt="Profile Picture" class="rounded-full w-36 h-36 mx-auto mb-6 border-4 border-white shadow-lg">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 animate-fade-in-down">Hi, I'm John Paul!</h1>
+            <p class="text-xl md:text-2xl mb-8 animate-fade-in-up">A passionate Web Developer | Designer | Coder</p>
+            <a href="#projects" class="bg-white text-indigo-600 hover:bg-indigo-100 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 inline-block">View My Work</a>
+        </div>
+    </section>
 
-        <title>Edson Portfolio</title>
-    </head>
-    <body>
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-indigo-700">About Me</h2>
+            <div class="max-w-3xl mx-auto text-lg text-gray-700 leading-relaxed">
+                <p class="mb-4">Hello! I'm John Paul, a dedicated and enthusiastic web developer with a knack for creating beautiful and functional web experiences. My journey into web development began with a curiosity for how websites work, which quickly evolved into a passion for building them from the ground up.</p>
+                <p class="mb-4">I specialize in front-end development, bringing designs to life with clean, efficient, and responsive code. I'm always eager to learn new technologies and improve my skills to deliver high-quality solutions.</p>
+                <p>When I'm not coding, you can find me exploring new design trends, reading tech blogs, or enjoying a good cup of coffee. I believe in continuous learning and always strive to push the boundaries of what's possible on the web.</p>
+            </div>
+        </div>
+    </section>
 
-    
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Edson Mendoza Angcaya</a>
-                </div>
-
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">My Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
-			<li class="nav__item"><a href="#capstone" class="nav__link">My Capstone Project</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact Me</a></li>
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-indigo-700">My Skills</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <!-- Skill Card 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-600">Front-End Development</h3>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>HTML5, CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>React.js</li>
+                        <li>Tailwind CSS, Bootstrap</li>
                     </ul>
                 </div>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
+                <!-- Skill Card 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-600">Back-End Development</h3>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>Node.js, Express.js</li>
+                        <li>Python, Django/Flask</li>
+                        <li>RESTful APIs</li>
+                    </ul>
                 </div>
-            </nav>
-        </header>
-
-        <main class="l-main">
-          
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title">I'm <span class="home__title-color">Edson</span><br>IT Professional</h1>
-
-                    <a href="#contact" class="button">Contact</a>
-		<br>
-		<br>
-		    <a href="https://drive.google.com/file/d/1uDtCpvJcz_Pg3043gBzeKhPcUhYA2Fdc/view?usp=sharing" class="button" target="_blank" rel="noopener noreferrer">Resume</a>
+                <!-- Skill Card 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 transform hover:scale-105">
+                    <h3 class="text-xl font-semibold mb-3 text-indigo-600">Databases & Tools</h3>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>MongoDB, PostgreSQL</li>
+                        <li>Git, GitHub</li>
+                        <li>VS Code, npm/yarn</li>
+                    </ul>
                 </div>
-
-                <div class="home__social">
-                    <a href="https://www.facebook.com/eggson03/" class="home__social-icon"><i class='bx bxl-facebook'></i></a>
-                
-
-                </div>
-
-		 
-                <div class="home__img">
-
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        <image class="home__blob-img" x="50" y="60" href="assets/img/final.png"/>
-                        </g>
-                    </svg> 
-                </div>
-            </section>
-
-           
-            <section class="about section " id="about">
-                <h2 class="section-title">About Me</h2>
-
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/ANGCAYA, EDSON MENDOZA SFBR DSC_7221.jpg" alt="">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I'm Edson M. Angcaya</h2>
-                        <p class="about__text">I graduated from City College of Tagaytay with a Bachelor's Degree in Information Technology. In senior high school, I studied Technical-Vocational Livelihood - Information and Communications Technology (TVL - ICT).
-                    </div>                                   
-                </div>
-            </section>
-
-           
-            <section class="skills section" id="skills">
-                <h2 class="section-title">My Skills</h2>
-
-                <div class="skills__container bd-grid">          
-                    <div>
-                        <h2 class="skills__subtitle">Professional Skills</h2>
-                        <p class="skills__text">Proficient in a range of creative and technical applications, including Adobe Photoshop, Microsoft Office, Google Suite and multimedia software.
-			    Possess strong computer hardware and networking knowledge, ideal for supporting various technical needs.
-				Skilled in data entry and management, ensuring accuracy and detail oriented in information processing.
-                    
-			<div class="skills__data">
-                            <div class="skills__names">
-                                <span class="skills__name">System Planning and Design</span>
-                            </div>
-                       
-                            <div>
-                                <span class="skills__percentage"></span>
-                            </div>
-                        </div>
-
-			<div class="skills__data">
-                            <div class="skills__names">
-                                <span class="skills__name">Technical Support</span>
-                            </div>
-                       
-                            <div>
-                                <span class="skills__percentage"></span>
-                            </div>
-                        </div>
-			         
-			    <div class="skills__data">
-                            <div class="skills__names">
-                                
-                                <span class="skills__name">Google Workspace</span>
-                            </div>
-                       
-                            <div>
-                                <span class="skills__percentage"></span>
-                            </div>
-                        </div>
-
-			<div class="skills__data">
-                            <div class="skills__names">
-                                
-                                <span class="skills__name">Microsoft Office Suite</span>
-                            </div>
-                       
-                            <div>
-                                <span class="skills__percentage"></span>
-                            </div>
-                        </div>
-
-
-			    <div class="skills__data">
-                            <div class="skills__names">
-                                
-                                <span class="skills__name">Data Analysis</span>
-                            </div>
-                       
-                            <div>
-                                <span class="skills__percentage"></span>
-                            </div>
-                        </div>
-						
-						
-                        <div class="skills__data">
-                            <div class="skills__names">
-                              
-                                <span class="skills__name">Multimedia or Creative & Design</span>
-                            </div>
-                         
-                            <div>
-                                <span class="skills__percentage"></span>
-                            </div>
-                        </div>
-						
-						
-                        <div class="skills__data">
-                            <div class="skills__names">
-                           
-                                <span class="skills__name">Computer Networking</span>
-                            </div>
-                          
-                            <div>
-                                <span class="skills__percentage"></span>
-                            </div>
-                        </div>
-						
-						
-                        <div class="skills__data">
-                            <div class="skills__names">
-
-                                <span class="skills__name">Computer Hardware & Software</span>
-                            </div>
-                      
-                            <div>
-                                <span class="skills__percentage"></span>
-                            </div>
-                        </div>
-
-			       <div class="skills__data">
-                            <div class="skills__names">
-
-                                <span class="skills__name">Autocad & SketchUp</span>
-                            </div>
-                      
-                            <div>
-                                <span class="skills__percentage"></span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div>              
-                        <img src="assets/img/11.jpg" alt="" class="skills__img">
-                    </div>
-                </div>
-            </section>
-
-         
-         <section class="work section" id="work">
-    <h2 class="section-title">My Work</h2>
-
-    <div class="work__container bd-grid">
-
-        <div class="work__img">
-            <img src="assets/img/work1.jpg" alt="">
-        </div>
-        <div class="work__img">
-            <img src="assets/img/work2.jpg" alt="">
-        </div>
-        <div class="work__img">
-            <img src="assets/img/work3.jpg" alt="">
-        </div>
-        <div class="work__img">
-            <img src="assets/img/work4.jpg" alt="">
-        </div>
-        <div class="work__img">
-            <img src="assets/img/work5.jpg" alt="">
-        </div>
-        <div class="work__img">
-            <img src="assets/img/work6.jpg" alt="">
-        </div>
-
-        <div class="work__video">
-            <video controls muted autoplay loop>
-                <source src="assets/img/home_network_setup2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        </div> </section>
-
-	    <section class="capstone section" id="capstone">
-                <h2 class="section-title">My Capstone Project</h2>
-		     <h3 class="section_subtitle">Development of Web-Based Online Information Management System 
-			     with Data Analytics for Metro Maharlika Tagaytay Tricycle Operators and Drivers Association
-			     
-                <div class="work__container bd-grid">
-			
-                    <a href="" class="work__img">
-                        <img src="assets/img/login.png" alt="">
-                    </a>
-			
-                    <a href="" class="work__img">
-                        <img src="assets/img/dashboard.png" alt="">
-                    </a>
-
-                    <a href="" class="work__img">
-                        <img src="assets/img/members.png" alt="">
-                    </a>
-
-                    <a href="" class="work__img">
-                        <img src="assets/img/da1.png" alt="">
-                    </a>
-
-                    <a href="" class="work__img">
-                        <img src="assets/img/da2.png" alt="">
-                    </a>
-
-             	    <a href="" class="work__img">
-                        <img src="assets/img/da3.png" alt="">
-                    </a>
-	
-			
-		</div>
-
-          
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact Me</h2>
-
-                <div class="contact__container bd-grid">
-                 
-                        <h3 class="skills__subtitle">Contact Number:</h3> 
-				<p class="skills__text">09381670309</p>
-						
-			<h3 class="skills__subtitle">Email Address:</h3> 
-				<p class="skills__text">edson.angcaya.003@gmail.com</p>
-			
-			
-			<h3 class="skills__subtitle">Curriculum Vitae</h3>
-				<a href="https://drive.google.com/file/d/1uDtCpvJcz_Pg3043gBzeKhPcUhYA2Fdc/view?usp=sharing" class="button" target="_blank" rel="noopener noreferrer">Click Here to Download My CV</a>	
-			
-		    <div>              
-                     
-                    </div>		
-         
-                 
-                </div>
-            </section>
-        </main>
-
-       
-        <footer class="footer">
-            <p class="footer__title">Edson M. Angcaya</p>
-            <div class="footer__social">
-                <a href="https://www.facebook.com/eggson03/" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                
             </div>
-          
-        </footer>
+        </div>
+    </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 text-indigo-700">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300 transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/E0E7FF/4F46E5?text=Project+1" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-indigo-600">E-commerce Website</h3>
+                        <p class="text-gray-700 mb-4">A fully functional e-commerce platform built with React and Node.js, featuring user authentication, product listings, and a shopping cart.</p>
+                        <a href="#" class="text-indigo-500 hover:text-indigo-700 font-medium">View Project &rarr;</a>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300 transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/E0E7FF/4F46E5?text=Project+2" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-indigo-600">Task Management App</h3>
+                        <p class="text-gray-700 mb-4">A sleek and intuitive task management application developed using Vue.js and a Firebase backend for real-time data synchronization.</p>
+                        <a href="#" class="text-indigo-500 hover:text-indigo-700 font-medium">View Project &rarr;</a>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300 transform hover:scale-105">
+                    <img src="https://placehold.co/600x400/E0E7FF/4F46E5?text=Project+3" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-indigo-600">Blog Platform</h3>
+                        <p class="text-gray-700 mb-4">A responsive blog platform built with Django, allowing users to create, edit, and publish posts with a rich text editor.</p>
+                        <a href="#" class="text-indigo-500 hover:text-indigo-700 font-medium">View Project &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-       
-        <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-10 text-indigo-700">Get In Touch</h2>
+            <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <div class="flex flex-col items-center space-y-4">
+                <a href="mailto:your.email@example.com" class="bg-indigo-600 text-white hover:bg-indigo-700 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 inline-block">
+                    Email Me
+                </a>
+                <div class="flex space-x-6 mt-6">
+                    <a href="https://github.com/yourusername" target="_blank" class="text-gray-600 hover:text-indigo-600 transition duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.499.09.679-.217.679-.481 0-.237-.008-.865-.013-1.702-2.782.602-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.618.069-.606.069-.606 1.003.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.089 2.91.835.09-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.949 0-1.092.39-1.988 1.029-2.681-.103-.253-.446-1.272.098-2.65 0 0 .84-.268 2.75 1.022A9.606 9.606 0 0112 6.865c.85.004 1.705.115 2.504.337 1.909-1.29 2.747-1.022 2.747-1.022.546 1.379.202 2.398.099 2.651.64.693 1.029 1.59 1.029 2.681 0 3.845-2.339 4.681-4.566 4.935.359.307.678.915.678 1.846 0 1.33-.012 2.41-.012 2.727 0 .266.18.577.688.48C21.137 20.28 24 16.526 24 12.017 24 6.484 19.522 2 14 2h-2z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="text-gray-600 hover:text-indigo-600 transition duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-       
-        <script src="assets/js/main.js"></script>
-    </body>
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-6 mt-auto">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 John Paul. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
 </html>
