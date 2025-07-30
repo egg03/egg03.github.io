@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // These paths are now correct based on your file structure (assets/img/).
         const project2Images = [
             'assets/img/MCC Context Diagram.jpg', // Your first image for this project
-            'assets/img/DA Image.png',           // Your second image for this project
-            'assets/img/MCC Gen Flowchart.jpg'    // Your third image for this project
+            'assets/img/dashboard.png',           // Your second image for this project
+            'assets/img/home server.jpg'    // Your third image for this project
             // Add more image paths here if you have more images for this carousel
         ];
         let currentImageIndex = 0;
