@@ -43,11 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Project 2 carousel elements found:', { project2Image, project2PrevButton, project2NextButton });
 
         // Define the images for the carousel.
-        // Ensure these paths are correct relative to your index.html file.
+        // These paths are now correct based on your file structure (assets/img/).
         const project2Images = [
-            'assets/img/MCC Context Diagram.jpg', // Your first image
-            'assets/img/DA Image.png', // Replace with the path to your 2nd image (e.g., 'assets/img/your-image-2.jpg')
-            'assets/img/MCC Gen Flowchart.jpg' // Replace with the path to your 3rd image (e.g., 'assets/img/your-image-3.png')
+            'assets/img/MCC Context Diagram.jpg', // Your first image for this project
+            'assets/img/DA Image.png',           // Your second image for this project
+            'assets/img/MCC Gen Flowchart.jpg'    // Your third image for this project
             // Add more image paths here if you have more images for this carousel
         ];
         let currentImageIndex = 0;
