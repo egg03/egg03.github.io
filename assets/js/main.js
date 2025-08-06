@@ -12,16 +12,21 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenuButton.addEventListener('click', () => {
             console.log('Hamburger menu clicked!');
             console.log('Before toggle - navMenu classes:', navMenu.classList);
+
+            // Toggle the 'hidden' class. Tailwind's 'md:flex' will ensure it's always visible on larger screens.
             navMenu.classList.toggle('hidden');
+
             console.log('After toggle - navMenu classes:', navMenu.classList);
         });
 
         // Close the mobile menu when a navigation link is clicked
         navMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
+                // Only hide if it's currently visible and on a mobile screen
+                // Check if the menu is not hidden AND the screen width is less than md breakpoint (768px)
                 if (!navMenu.classList.contains('hidden') && window.innerWidth < 768) {
                     console.log('Nav link clicked, closing mobile menu.');
-                    navMenu.classList.add('hidden');
+                    navMenu.classList.add('hidden'); // Hide the menu
                 }
             });
         });
@@ -34,76 +39,42 @@ document.addEventListener('DOMContentLoaded', () => {
     const project2PrevButton = document.getElementById('project2-prev');
     const project2NextButton = document.getElementById('project2-next');
 
-    // Image Modal elements
-    const imageModal = document.getElementById('image-modal');
-    const modalImage = document.getElementById('modal-image');
-    const closeModal = document.getElementById('close-modal');
-
     if (project2Image && project2PrevButton && project2NextButton) {
         console.log('Project 2 carousel elements found:', { project2Image, project2PrevButton, project2NextButton });
 
+        // Define the images for the carousel.
+        // Ensure these paths are correct relative to your index.html file.
         const project2Images = [
-            'assets/img/MCC Context Diagram.jpg',
-            'assets/img/dashboard.png',
-            'assets/img/home server.jpg'
+            'assets/img/MCC Context Diagram.jpg', // Your first image
+            'assets/img/DA Image.png', // Replace with the path to your 2nd image (e.g., 'assets/img/your-image-2.jpg')
+            'assets/img/MCC Gen Flowchart.jpg' // Replace with the path to your 3rd image (e.g., 'assets/img/your-image-3.png')
+            // Add more image paths here if you have more images for this carousel
         ];
         let currentImageIndex = 0;
 
+        // Function to update the displayed image (simplified for debugging)
         const updateProject2Image = () => {
             console.log('Updating image to index:', currentImageIndex, 'path:', project2Images[currentImageIndex]);
             project2Image.src = project2Images[currentImageIndex];
         };
 
+        // Event listener for the previous button
         project2PrevButton.addEventListener('click', () => {
             console.log('Previous button clicked.');
             currentImageIndex = (currentImageIndex - 1 + project2Images.length) % project2Images.length;
             updateProject2Image();
         });
 
+        // Event listener for the next button
         project2NextButton.addEventListener('click', () => {
             console.log('Next button clicked.');
             currentImageIndex = (currentImageIndex + 1) % project2Images.length;
             updateProject2Image();
         });
 
+        // Initialize the carousel with the first image
         updateProject2Image();
     } else {
         console.error('Project 2 carousel elements (image, prev, or next button) not found!');
-    }
-
-    // =======================================================
-    // ======== Image Modal (Expand on Click) Functionality ===
-    // =======================================================
-    
-    // Check if all modal and project image elements exist
-    if (project2Image && imageModal && modalImage && closeModal) {
-        console.log('Image modal elements found. Adding click listeners.');
-
-        // Open the modal when the project image is clicked
-        project2Image.addEventListener('click', function () {
-            // Get the current source of the carousel image
-            modalImage.src = this.src; 
-            // Remove the 'hidden' class to show the modal
-            imageModal.classList.remove('hidden'); 
-            console.log('Image opened in modal.');
-        });
-
-        // Close the modal when the close button is clicked
-        closeModal.addEventListener('click', function () {
-            // Add the 'hidden' class to hide the modal
-            imageModal.classList.add('hidden'); 
-            console.log('Modal closed via close button.');
-        });
-
-        // Close the modal if the user clicks anywhere on the overlay
-        imageModal.addEventListener('click', function (event) {
-            // Check if the click target is the modal itself and not the image inside it
-            if (event.target === this) {
-                imageModal.classList.add('hidden');
-                console.log('Modal closed via overlay click.');
-            }
-        });
-    } else {
-        console.error('Image modal elements (modal, modal image, or close button) not found!');
     }
 });
