@@ -164,7 +164,7 @@
                 <!-- Project Card 2 - Now with Image Carousel -->
                 <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300 transform hover:scale-105 relative">
                     <div class="relative w-full h-48">
-                        <img id="project2-image" src="assets/img/MCC Context Diagram.jpg" alt="Project 2 Image 1" class="w-full h-full object-cover">
+                        <img id="project2-image" src="assets/img/MCC Context Diagram.jpg" alt="Project 2 Image 1" class="w-full h-full object-cover cursor-pointer">
                         <button id="project2-prev" class="absolute left-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-r-lg focus:outline-none">
                             &#9664;
                         </button>
@@ -175,7 +175,13 @@
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2 text-blue-600">TESDA Micro-Credential Badging System Development</h3>
                         <p class="text-gray-700 mb-4">Conducted comprehensive system analysis and documentation for the development of a micro-credential badging system for TESDA. This involved system diagramming and visualization, requirements gathering, stakeholder analysis, and detailed documentation of the system's specifications and processes.</p>
-                        <!-- Removed "View Project" button -->
+                    </div>
+                </div>
+                
+                <div id="image-modal" class="hidden fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-75 z-50">
+                    <div class="relative p-4 max-w-4xl max-h-full">
+                        <span id="close-modal" class="absolute top-0 right-0 m-4 text-white text-4xl font-bold cursor-pointer">&times;</span>
+                        <img id="modal-image" class="max-w-full max-h-screen object-contain">
                     </div>
                 </div>
                 <!-- Project Card 3 -->
